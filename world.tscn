@@ -383,6 +383,18 @@ texture = ExtResource("1_7rej6")
 region_enabled = true
 region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
 
+[node name="House18" type="Sprite2D" parent="Items"]
+position = Vector2(12452, -2424)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House19" type="Sprite2D" parent="Items"]
+position = Vector2(8344, 139)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
 [node name="House10" type="Sprite2D" parent="Items"]
 position = Vector2(13622, -1397)
 texture = ExtResource("1_7rej6")
@@ -403,6 +415,47 @@ texture = ExtResource("1_7rej6")
 region_enabled = true
 region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
 
+[node name="House12" type="Sprite2D" parent="Items"]
+position = Vector2(12960, -373)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House13" type="Sprite2D" parent="Items"]
+position = Vector2(13188, -249)
+scale = Vector2(0.545013, 0.545013)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House14" type="Sprite2D" parent="Items"]
+position = Vector2(12054, -1400)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House15" type="Sprite2D" parent="Items"]
+position = Vector2(12282, -1276)
+scale = Vector2(0.545013, 0.545013)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House17" type="Sprite2D" parent="Items"]
+position = Vector2(11714, -443)
+rotation = 0.428123
+scale = Vector2(0.349352, 0.349352)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House16" type="Sprite2D" parent="Items"]
+position = Vector2(11635, -518)
+scale = Vector2(0.545013, 0.545013)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
 [node name="House2" type="Sprite2D" parent="Items"]
 z_index = -3
 position = Vector2(7520, -42)
@@ -411,9 +464,42 @@ texture = ExtResource("1_7rej6")
 region_enabled = true
 region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
 
+[node name="House20" type="Sprite2D" parent="Items"]
+z_index = -3
+position = Vector2(7520, -42)
+scale = Vector2(0.677405, 0.677405)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House21" type="Sprite2D" parent="Items"]
+z_index = -3
+position = Vector2(8232.25, 281.835)
+scale = Vector2(0.677405, 0.677405)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House22" type="Sprite2D" parent="Items"]
+z_index = -3
+position = Vector2(8232.25, 281.835)
+scale = Vector2(0.677405, 0.677405)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
 [node name="House5" type="Sprite2D" parent="Items"]
 z_index = -3
 position = Vector2(4987, -1261)
+rotation = 0.210097
+scale = Vector2(0.464894, 0.464894)
+texture = ExtResource("1_7rej6")
+region_enabled = true
+region_rect = Rect2(747.432, 3.80993, 420.914, 528.099)
+
+[node name="House23" type="Sprite2D" parent="Items"]
+z_index = -3
+position = Vector2(207, -85.0001)
 rotation = 0.210097
 scale = Vector2(0.464894, 0.464894)
 texture = ExtResource("1_7rej6")
@@ -653,7 +739,7 @@ text = "TO JUMP"
 position = Vector2(3778, 760)
 
 [node name="Player" parent="." instance=ExtResource("2_k2fod")]
-position = Vector2(532, 709)
+position = Vector2(416, 460)
 
 [node name="Objectives" type="Node2D" parent="."]
 z_index = -1
