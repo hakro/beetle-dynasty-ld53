@@ -708,6 +708,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_hwm7j")
+metadata/_edit_group_ = true
 
 [node name="Body" type="Sprite2D" parent="."]
 
