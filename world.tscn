@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b015j7yspxgnr"]
+[gd_scene load_steps=8 format=3 uid="uid://b015j7yspxgnr"]
 
 [ext_resource type="Texture2D" uid="uid://dmq6xasniyxp3" path="res://Assets/Sprites/terrain.png" id="1_xcmyl"]
 [ext_resource type="PackedScene" uid="uid://baamlfo8iser4" path="res://player.tscn" id="2_k2fod"]
 [ext_resource type="PackedScene" uid="uid://c58x5gngjss33" path="res://npc.tscn" id="3_ssdii"]
+[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/beetles.png" id="4_rg0cd"]
+[ext_resource type="FontFile" uid="uid://dvy37d663ny3a" path="res://Assets/Fonts/IndieFlower-Regular.ttf" id="5_wp3ug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjcxj"]
 texture = ExtResource("1_xcmyl")
@@ -111,6 +113,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_rjcxj")
 
 [node name="World" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [396.0]
 
 [node name="Terrain" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_jxwb7")
@@ -122,3 +125,187 @@ position = Vector2(1711, 759)
 
 [node name="Player" parent="." instance=ExtResource("2_k2fod")]
 position = Vector2(1113, 735)
+
+[node name="Help" type="Node2D" parent="."]
+position = Vector2(652, 310)
+metadata/_edit_group_ = true
+
+[node name="W" type="Sprite2D" parent="Help"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="Help/W"]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A" type="Sprite2D" parent="Help"]
+position = Vector2(-62, 65)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="Help/A"]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="S" type="Sprite2D" parent="Help"]
+position = Vector2(-1, 65)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="Help/S"]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Sprite2D" parent="Help"]
+position = Vector2(62, 65)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="Help/D"]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="E" type="Sprite2D" parent="Help"]
+position = Vector2(635, 65.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="Help/E"]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space" type="Sprite2D" parent="Help"]
+position = Vector2(320.25, 64.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(48.7233, 500.306, 357.399, 113.8)
+
+[node name="Label" type="Label" parent="Help/Space"]
+offset_left = -72.0
+offset_top = -42.0
+offset_right = 79.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "SPACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelToInteract" type="Label" parent="Help"]
+offset_left = 519.0
+offset_top = 98.5
+offset_right = 755.0
+offset_bottom = 160.5
+theme_override_colors/font_color = Color(0.239216, 0.239216, 0.239216, 1)
+theme_override_colors/font_shadow_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("5_wp3ug")
+theme_override_font_sizes/font_size = 40
+text = "TO INTERACT"
+
+[node name="ESC" type="Sprite2D" parent="Help"]
+position = Vector2(905, 65.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_rg0cd")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="Help/ESC"]
+offset_left = -44.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "ESC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelToInteract2" type="Label" parent="Help"]
+offset_left = 836.0
+offset_top = 99.0
+offset_right = 995.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.239216, 0.239216, 0.239216, 1)
+theme_override_colors/font_shadow_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("5_wp3ug")
+theme_override_font_sizes/font_size = 40
+text = "TO QUIT"
+
+[node name="LabelToMove" type="Label" parent="Help"]
+offset_left = -74.0
+offset_top = 96.0
+offset_right = 82.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0.239216, 0.239216, 0.239216, 1)
+theme_override_colors/font_shadow_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("5_wp3ug")
+theme_override_font_sizes/font_size = 40
+text = "TO MOVE"
+
+[node name="LabelToJump" type="Label" parent="Help"]
+offset_left = 245.25
+offset_top = 95.25
+offset_right = 399.25
+offset_bottom = 157.25
+theme_override_colors/font_color = Color(0.239216, 0.239216, 0.239216, 1)
+theme_override_colors/font_shadow_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("5_wp3ug")
+theme_override_font_sizes/font_size = 40
+text = "TO JUMP"
