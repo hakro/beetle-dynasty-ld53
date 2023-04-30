@@ -7,11 +7,11 @@ const JUMP_VELOCITY = -1260.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@onready
-var anim_player : AnimationPlayer = $AnimationPlayer
+@onready var anim_player : AnimationPlayer = $AnimationPlayer
+@onready var sprite : Sprite2D = $Body
 
-@onready
-var sprite : Sprite2D = $Body
+func _ready() -> void:
+	GameManager.connect("deliver_flowers_activated", _on_deliver_flowers_activated)
 
 func _physics_process(delta: float) -> void:
 	if velocity == Vector2.ZERO:
@@ -37,3 +37,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _on_deliver_flowers_activated() -> void:
+	%Flowers.show()

@@ -26,11 +26,10 @@ func _hide_dialog_bubble(_player: Node2D) -> void:
 func set_bubble_text() -> void:
 	var text_array : Array = GameManager.get_npc_text()
 	for text in text_array :
-		print(text)
 		dialog_label.text = text
 		dialog_label.visible_ratio = 0
 		var tween = create_tween()
 		tween.tween_property(dialog_label, "visible_ratio", 1, 1.5)
 		await tween.finished
 		await GameManager.interaction_triggered
-	
+	GameManager.next_step()

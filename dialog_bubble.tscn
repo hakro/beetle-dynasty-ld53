@@ -27,3 +27,33 @@ needs to fit in frame
 Try to make it aligned"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="E" type="Sprite2D" parent="."]
+position = Vector2(-265, 13)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_7pqon")
+region_enabled = true
+region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
+
+[node name="Label" type="Label" parent="E"]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 25.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.372549, 0.372549, 0.372549, 1)
+theme_override_font_sizes/font_size = 50
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelToContinue" type="Label" parent="E"]
+offset_left = 60.0
+offset_top = -34.0
+offset_right = 219.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.239216, 0.239216, 0.239216, 1)
+theme_override_colors/font_shadow_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("2_pdqxi")
+theme_override_font_sizes/font_size = 40
+text = "TO CONTINUE"

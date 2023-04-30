@@ -766,6 +766,15 @@ offset = Vector2(1.63523, 34.3398)
 region_enabled = true
 region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
 
+[node name="Flowers" type="Sprite2D" parent="Body/Torso/LeftArm/LowerLeftArm"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(65.8145, 112.493)
+rotation = 2.12359
+texture = ExtResource("2_th7b2")
+region_enabled = true
+region_rect = Rect2(405.7, 414.244, 156.354, 175.715)
+
 [node name="RightLeg" type="Sprite2D" parent="Body/Torso"]
 position = Vector2(-8, -8)
 rotation = 1.65012
