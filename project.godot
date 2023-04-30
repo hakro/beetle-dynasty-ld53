@@ -23,7 +23,7 @@ window/stretch/mode="canvas_items"
 
 [physics]
 
-2d/default_gravity=3200.0
+2d/default_gravity=3300.0
 
 [rendering]
 
