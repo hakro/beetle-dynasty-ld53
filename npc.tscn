@@ -1,11 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://baamlfo8iser4"]
+[gd_scene load_steps=10 format=3 uid="uid://c58x5gngjss33"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_hwm7j"]
-[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/beetles.png" id="2_th7b2"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dd4cs"]
-radius = 32.0
-height = 132.0
+[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/beetles.png" id="1_bpfba"]
+[ext_resource type="Script" path="res://npc.gd" id="1_featy"]
+[ext_resource type="PackedScene" uid="uid://bir883is87h4n" path="res://dialog_bubble.tscn" id="3_j8lob"]
 
 [sub_resource type="Animation" id="Animation_lyv6f"]
 length = 0.001
@@ -706,33 +703,37 @@ _data = {
 "run": SubResource("Animation_sjqj0")
 }
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
-script = ExtResource("1_hwm7j")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emnfi"]
+size = Vector2(390.5, 330)
+
+[node name="NPC" type="Node2D"]
+script = ExtResource("1_featy")
 
 [node name="Body" type="Sprite2D" parent="."]
+scale = Vector2(-1.839, 1.839)
 
 [node name="Torso" type="Sprite2D" parent="Body"]
 position = Vector2(-5, 49)
 rotation = 0.0463941
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_th7b2")
+scale = Vector2(0.508998, 0.482004)
+texture = ExtResource("1_bpfba")
 offset = Vector2(5, -49)
 region_enabled = true
-region_rect = Rect2(2.971, 115.657, 91.4125, 114.928)
+region_rect = Rect2(264.733, 17.2844, 109.29, 169.512)
 
 [node name="Head" type="Sprite2D" parent="Body/Torso"]
 position = Vector2(18.4058, -81.4937)
 rotation = 0.0834863
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(-15, -76)
 region_enabled = true
-region_rect = Rect2(97.8601, 10.0458, 155.514, 171.742)
+region_rect = Rect2(373.259, 30.6599, 135.415, 164.732)
 
 [node name="RightArm" type="Sprite2D" parent="Body/Torso"]
 position = Vector2(-24, -75)
 rotation = -1.75292
 scale = Vector2(0.611535, 0.611535)
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(-1, 28)
 region_enabled = true
 region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
@@ -740,8 +741,8 @@ region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
 [node name="LowerRightArm" type="Sprite2D" parent="Body/Torso/RightArm"]
 show_behind_parent = true
 position = Vector2(-1.63523, 57.2331)
-rotation = -1.14394
-texture = ExtResource("2_th7b2")
+rotation = -0.997742
+texture = ExtResource("1_bpfba")
 offset = Vector2(1.63523, 34.3398)
 region_enabled = true
 region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
@@ -751,7 +752,7 @@ show_behind_parent = true
 position = Vector2(21.8744, -63.3839)
 rotation = -1.11504
 scale = Vector2(0.611535, 0.611535)
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(-1, 28)
 region_enabled = true
 region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
@@ -759,8 +760,8 @@ region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
 [node name="LowerLeftArm" type="Sprite2D" parent="Body/Torso/LeftArm"]
 show_behind_parent = true
 position = Vector2(-1.63523, 57.2331)
-rotation = -1.14394
-texture = ExtResource("2_th7b2")
+rotation = -1.04201
+texture = ExtResource("1_bpfba")
 offset = Vector2(1.63523, 34.3398)
 region_enabled = true
 region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
@@ -769,7 +770,7 @@ region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
 position = Vector2(-8, -8)
 rotation = 1.65012
 scale = Vector2(0.758958, 0.758958)
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(-1, 29)
 region_enabled = true
 region_rect = Rect2(11.3833, 26.1827, 27.972, 70.2679)
@@ -779,7 +780,7 @@ show_behind_parent = true
 position = Vector2(-3.0772, 60.0128)
 rotation = -0.159626
 scale = Vector2(0.743172, 0.743172)
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(15.9564, 8.86467)
 region_enabled = true
 region_rect = Rect2(100.84, 184.552, 55.5386, 41.7553)
@@ -789,7 +790,7 @@ show_behind_parent = true
 position = Vector2(8, -6)
 rotation = 1.23768
 scale = Vector2(0.758958, 0.758958)
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(-1, 29)
 region_enabled = true
 region_rect = Rect2(11.3833, 26.1827, 27.972, 70.2679)
@@ -799,15 +800,10 @@ show_behind_parent = true
 position = Vector2(0.553791, 57.5508)
 rotation = 0.231666
 scale = Vector2(0.743172, 0.743172)
-texture = ExtResource("2_th7b2")
+texture = ExtResource("1_bpfba")
 offset = Vector2(14.1835, 8.86467)
 region_enabled = true
 region_rect = Rect2(100.84, 184.552, 55.5386, 41.7553)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-1, 7)
-shape = SubResource("CapsuleShape2D_dd4cs")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
@@ -816,7 +812,13 @@ libraries = {
 "": SubResource("AnimationLibrary_dif6p")
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -250)
-limit_left = 0
-position_smoothing_enabled = true
+[node name="DialogBubble" parent="." instance=ExtResource("3_j8lob")]
+visible = false
+show_behind_parent = true
+position = Vector2(-223, -294)
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-101.25, -34)
+shape = SubResource("RectangleShape2D_emnfi")
