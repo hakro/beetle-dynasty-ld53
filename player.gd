@@ -55,3 +55,6 @@ func _on_deliver_mushrooms_activated() -> void:
 
 func hide_flowers() -> void:
 	flowers_sprite.hide()
+
+func hide_mushrooms() -> void:
+	mushrooms_sprite.hide()

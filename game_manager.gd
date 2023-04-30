@@ -4,16 +4,19 @@ signal interaction_triggered
 signal deliver_flowers_activated
 signal deliver_mushrooms_pending
 signal deliver_mushrooms_activated
+signal game_over
 
 enum Steps {
 	DELIVER_FLOWERS_PENDING,
 	DELIVER_FLOWERS_ACTIVE,
 	DELIVER_MUSHROOMS_PENDING,
-	DELIVER_MUSHROOMS_ACTIVE
+	DELIVER_MUSHROOMS_ACTIVE,
+	GAME_OVER
 }
 
 var current_step := Steps.DELIVER_FLOWERS_PENDING
 var flowers_delivered : bool = false
+var mushrooms_delivered : bool = false
 
 func get_npc_text() -> Array:
 	match current_step:
@@ -63,6 +66,12 @@ func next_step() -> void:
 			# Flowers have been delivered. Move to next mission. Mushrooms
 			current_step = Steps.DELIVER_MUSHROOMS_ACTIVE
 			emit_signal("deliver_mushrooms_activated")
+		Steps.DELIVER_MUSHROOMS_ACTIVE:
+			if not mushrooms_delivered:
+				return
+			# Flowers have been delivered. Move to next mission. Mushrooms
+			current_step = Steps.GAME_OVER
+			emit_signal("game_over")
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
