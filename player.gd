@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 		sprite.scale.x = sign(velocity.x)
-		if is_on_floor():
+		if is_on_floor() and not is_on_wall():
 			anim_player.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

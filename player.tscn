@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://4c6ruc2mcf6p"]
+[gd_scene load_steps=9 format=3 uid="uid://baamlfo8iser4"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_hwm7j"]
-[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/beetle.png" id="1_xw5ee"]
+[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/beetles.png" id="2_th7b2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dd4cs"]
 radius = 32.0
@@ -715,7 +715,7 @@ script = ExtResource("1_hwm7j")
 position = Vector2(-5, 49)
 rotation = 0.0463941
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(5, -49)
 region_enabled = true
 region_rect = Rect2(2.971, 115.657, 91.4125, 114.928)
@@ -723,7 +723,7 @@ region_rect = Rect2(2.971, 115.657, 91.4125, 114.928)
 [node name="Head" type="Sprite2D" parent="Body/Torso"]
 position = Vector2(18.4058, -81.4937)
 rotation = 0.0834863
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(-15, -76)
 region_enabled = true
 region_rect = Rect2(97.8601, 10.0458, 155.514, 171.742)
@@ -732,7 +732,7 @@ region_rect = Rect2(97.8601, 10.0458, 155.514, 171.742)
 position = Vector2(-24, -75)
 rotation = -1.75292
 scale = Vector2(0.611535, 0.611535)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(-1, 28)
 region_enabled = true
 region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
@@ -740,8 +740,8 @@ region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
 [node name="LowerRightArm" type="Sprite2D" parent="Body/Torso/RightArm"]
 show_behind_parent = true
 position = Vector2(-1.63523, 57.2331)
-rotation = -0.582361
-texture = ExtResource("1_xw5ee")
+rotation = -1.14394
+texture = ExtResource("2_th7b2")
 offset = Vector2(1.63523, 34.3398)
 region_enabled = true
 region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
@@ -751,7 +751,7 @@ show_behind_parent = true
 position = Vector2(21.8744, -63.3839)
 rotation = -1.11504
 scale = Vector2(0.611535, 0.611535)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(-1, 28)
 region_enabled = true
 region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
@@ -760,7 +760,7 @@ region_rect = Rect2(10.8079, 25.2428, 29.0531, 71.7543)
 show_behind_parent = true
 position = Vector2(-1.63523, 57.2331)
 rotation = -1.14394
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(1.63523, 34.3398)
 region_enabled = true
 region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
@@ -769,17 +769,17 @@ region_rect = Rect2(50.9734, 15.2304, 30.1341, 79.3216)
 position = Vector2(-8, -8)
 rotation = 1.65012
 scale = Vector2(0.758958, 0.758958)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(-1, 29)
 region_enabled = true
 region_rect = Rect2(11.3833, 26.1827, 27.972, 70.2679)
 
 [node name="RightShoe" type="Sprite2D" parent="Body/Torso/RightLeg"]
 show_behind_parent = true
-position = Vector2(0.190254, 57.6668)
-rotation = 0.821139
+position = Vector2(-3.0772, 60.0128)
+rotation = -0.159626
 scale = Vector2(0.743172, 0.743172)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(15.9564, 8.86467)
 region_enabled = true
 region_rect = Rect2(100.84, 184.552, 55.5386, 41.7553)
@@ -789,17 +789,17 @@ show_behind_parent = true
 position = Vector2(8, -6)
 rotation = 1.23768
 scale = Vector2(0.758958, 0.758958)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(-1, 29)
 region_enabled = true
 region_rect = Rect2(11.3833, 26.1827, 27.972, 70.2679)
 
 [node name="LeftShoe" type="Sprite2D" parent="Body/Torso/LeftLeg"]
 show_behind_parent = true
-position = Vector2(1.4836, 60.4167)
-rotation = 1.21325
+position = Vector2(0.553791, 57.5508)
+rotation = 0.231666
 scale = Vector2(0.743172, 0.743172)
-texture = ExtResource("1_xw5ee")
+texture = ExtResource("2_th7b2")
 offset = Vector2(14.1835, 8.86467)
 region_enabled = true
 region_rect = Rect2(100.84, 184.552, 55.5386, 41.7553)
@@ -815,3 +815,8 @@ speed_scale = 1.4
 libraries = {
 "": SubResource("AnimationLibrary_dif6p")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -250)
+limit_left = 0
+position_smoothing_enabled = true
