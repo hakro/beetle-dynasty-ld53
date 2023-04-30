@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c58x5gngjss33"]
+[gd_scene load_steps=11 format=3 uid="uid://c58x5gngjss33"]
 
 [ext_resource type="Script" path="res://npc.gd" id="1_featy"]
 [ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/common.png" id="2_g8mne"]
@@ -706,6 +706,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emnfi"]
 size = Vector2(390.5, 330)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68jw4"]
+size = Vector2(214, 387)
+
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_featy")
 metadata/_edit_group_ = true
@@ -823,3 +826,10 @@ position = Vector2(-36, -78)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(-101.25, -34)
 shape = SubResource("RectangleShape2D_emnfi")
+
+[node name="LimitWall" type="StaticBody2D" parent="."]
+position = Vector2(288, -216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimitWall"]
+position = Vector2(91, 148.5)
+shape = SubResource("RectangleShape2D_68jw4")
