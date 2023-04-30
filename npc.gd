@@ -9,6 +9,8 @@ func _ready() -> void:
 	interct_area.connect("body_entered", _show_dialog_bubble)
 	# Player leaves
 	interct_area.connect("body_exited", _hide_dialog_bubble)
+	
+	GameManager.connect("deliver_mushrooms_pending", _on_deliver_mushrooms_pending)
 
 func _show_dialog_bubble(_player: Node2D) -> void:
 	dialog_bubble.scale = Vector2.ZERO
@@ -33,3 +35,7 @@ func set_bubble_text() -> void:
 		await tween.finished
 		await GameManager.interaction_triggered
 	GameManager.next_step()
+
+func _on_deliver_mushrooms_pending() -> void:
+	# Flowers mission finished. Move NPC to next location
+	position = Vector2(10800, 245)

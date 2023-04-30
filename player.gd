@@ -10,9 +10,11 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Body
 @onready var flowers_sprite = %Flowers
+@onready var mushrooms_sprite = %Mushrooms
 
 func _ready() -> void:
 	GameManager.connect("deliver_flowers_activated", _on_deliver_flowers_activated)
+	GameManager.connect("deliver_mushrooms_activated", _on_deliver_mushrooms_activated)
 
 func _physics_process(delta: float) -> void:
 	if velocity == Vector2.ZERO:
@@ -43,4 +45,13 @@ func _on_deliver_flowers_activated() -> void:
 	flowers_sprite.scale = Vector2()
 	flowers_sprite.show()
 	var tween = create_tween()
-	tween.tween_property(flowers_sprite, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(flowers_sprite, "scale", Vector2(1, 1), 0.6).set_trans(Tween.TRANS_ELASTIC)
+
+func _on_deliver_mushrooms_activated() -> void:
+	mushrooms_sprite.scale = Vector2()
+	mushrooms_sprite.show()
+	var tween = create_tween()
+	tween.tween_property(mushrooms_sprite, "scale", Vector2(1, 1), 0.6).set_trans(Tween.TRANS_ELASTIC)
+
+func hide_flowers() -> void:
+	flowers_sprite.hide()

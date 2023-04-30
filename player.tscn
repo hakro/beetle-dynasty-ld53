@@ -775,6 +775,15 @@ texture = ExtResource("2_4nwn2")
 region_enabled = true
 region_rect = Rect2(405.7, 414.244, 156.354, 175.715)
 
+[node name="Mushrooms" type="Sprite2D" parent="Body/Torso/LeftArm/LowerLeftArm"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(18.0255, 89.0272)
+rotation = 2.22124
+texture = ExtResource("2_4nwn2")
+region_enabled = true
+region_rect = Rect2(569.17, 278.615, 97.6541, 115.153)
+
 [node name="RightLeg" type="Sprite2D" parent="Body/Torso"]
 position = Vector2(-8, -8)
 rotation = 1.65012
