@@ -6,7 +6,7 @@
 [node name="DialogBubble" type="Node2D"]
 position = Vector2(5, -3)
 
-[node name="Beetles" type="Sprite2D" parent="."]
+[node name="Bubble" type="Sprite2D" parent="."]
 position = Vector2(-2, -1)
 texture = ExtResource("1_7pqon")
 offset = Vector2(-185, -106)
@@ -19,7 +19,7 @@ offset_top = -189.0
 offset_right = -48.0
 offset_bottom = -45.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.403922, 0.403922, 0.403922, 1)
 theme_override_fonts/font = ExtResource("2_pdqxi")
 theme_override_font_sizes/font_size = 30
 text = "This is where everything 

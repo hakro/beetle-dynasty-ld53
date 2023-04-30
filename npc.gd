@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var interct_area : Area2D = $InteractionArea
 @onready var dialog_bubble : Node2D = $DialogBubble
+@onready var dialog_label : Label = $DialogBubble/Label
 
 func _ready() -> void:
 	# Player gets here
@@ -14,8 +15,19 @@ func _show_dialog_bubble(_player: Node2D) -> void:
 	dialog_bubble.show()
 	var tween = create_tween()
 	tween.tween_property(dialog_bubble, "scale", Vector2(1,1), 0.5).set_trans(Tween.TRANS_ELASTIC)
+	set_bubble_text()
 
 func _hide_dialog_bubble(_player: Node2D) -> void:
 	var tween = create_tween()
 	tween.tween_property(dialog_bubble, "scale", Vector2(0,0), 0.5).set_trans(Tween.TRANS_ELASTIC)
 	tween.tween_callback(dialog_bubble.hide)
+
+# This function shows text in the dialog bubble depending on the situation
+func set_bubble_text() -> void:
+	var text : String = GameManager.get_npc_text()[1]
+	
+	dialog_label.visible_ratio = 0
+	dialog_label.text = text
+	var tween = create_tween()
+	tween.tween_property(dialog_label, "visible_ratio", 1, 2)
+	
