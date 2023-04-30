@@ -9,6 +9,7 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Body
+@onready var flowers_sprite = %Flowers
 
 func _ready() -> void:
 	GameManager.connect("deliver_flowers_activated", _on_deliver_flowers_activated)
@@ -39,4 +40,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_deliver_flowers_activated() -> void:
-	%Flowers.show()
+	flowers_sprite.scale = Vector2()
+	flowers_sprite.show()
+	var tween = create_tween()
+	tween.tween_property(flowers_sprite, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_ELASTIC)

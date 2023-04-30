@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bir883is87h4n"]
 
-[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/beetles.png" id="1_7pqon"]
+[ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/common.png" id="1_p13pi"]
 [ext_resource type="FontFile" uid="uid://dvy37d663ny3a" path="res://Assets/Fonts/IndieFlower-Regular.ttf" id="2_pdqxi"]
 
 [node name="DialogBubble" type="Node2D"]
@@ -8,7 +8,7 @@ position = Vector2(5, -3)
 
 [node name="Bubble" type="Sprite2D" parent="."]
 position = Vector2(-2, -1)
-texture = ExtResource("1_7pqon")
+texture = ExtResource("1_p13pi")
 offset = Vector2(-185, -106)
 region_enabled = true
 region_rect = Rect2(27.579, 264.961, 379.224, 225.276)
@@ -31,7 +31,7 @@ vertical_alignment = 1
 [node name="E" type="Sprite2D" parent="."]
 position = Vector2(-265, 13)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_7pqon")
+texture = ExtResource("1_p13pi")
 region_enabled = true
 region_rect = Rect2(405.839, 274.774, 105.55, 118.173)
 
