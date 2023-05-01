@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://baamlfo8iser4"]
+[gd_scene load_steps=11 format=3 uid="uid://baamlfo8iser4"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_hwm7j"]
 [ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/common.png" id="2_4nwn2"]
+[ext_resource type="AudioStream" uid="uid://mnqjgd8nqqkk" path="res://Assets/Sounds/walk-step.wav" id="3_gefsp"]
+[ext_resource type="AudioStream" uid="uid://deui2j80nhfre" path="res://Assets/Sounds/jump.wav" id="4_utgqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dd4cs"]
 radius = 32.0
@@ -839,3 +841,11 @@ libraries = {
 position = Vector2(0, -190)
 limit_left = 0
 position_smoothing_enabled = true
+
+[node name="AudioWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gefsp")
+volume_db = -1.956
+
+[node name="AudioJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_utgqv")
+volume_db = -2.934

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://7873h25usau8"]
+[gd_scene load_steps=20 format=3 uid="uid://7873h25usau8"]
 
 [ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/common.png" id="1_7rej6"]
 [ext_resource type="Script" path="res://world.gd" id="1_cgheg"]
@@ -8,6 +8,8 @@
 [ext_resource type="FontFile" uid="uid://dvy37d663ny3a" path="res://Assets/Fonts/IndieFlower-Regular.ttf" id="5_wp3ug"]
 [ext_resource type="Script" path="res://flowers_objective.gd" id="6_o61wd"]
 [ext_resource type="Script" path="res://mushrooms_objective.gd" id="7_n6vu4"]
+[ext_resource type="AudioStream" uid="uid://y005rsgursc2" path="res://Assets/Sounds/objective.wav" id="8_upgrb"]
+[ext_resource type="AudioStream" uid="uid://bwprl4iqray38" path="res://Assets/Sounds/bg-music.ogg" id="9_u28kp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i818l"]
 atlas = ExtResource("1_7rej6")
@@ -764,6 +766,10 @@ scale_amount_min = 0.07
 scale_amount_max = 0.5
 color_ramp = SubResource("Gradient_1epiu")
 
+[node name="AudioObjective" type="AudioStreamPlayer" parent="Objectives/FlowersObjective"]
+stream = ExtResource("8_upgrb")
+volume_db = -16.953
+
 [node name="MushroomsObjective" type="Area2D" parent="Objectives"]
 position = Vector2(3420, -262)
 script = ExtResource("7_n6vu4")
@@ -784,6 +790,10 @@ scale_amount_min = 0.07
 scale_amount_max = 0.5
 color_ramp = SubResource("Gradient_1epiu")
 
+[node name="AudioObjective" type="AudioStreamPlayer" parent="Objectives/MushroomsObjective"]
+stream = ExtResource("8_upgrb")
+volume_db = -16.953
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../PsychCanvasModulate")
 libraries = {
@@ -791,6 +801,7 @@ libraries = {
 }
 
 [node name="Title" type="Node2D" parent="."]
+z_index = -10
 position = Vector2(845, 212)
 
 [node name="TitleLabel" type="Label" parent="Title"]
@@ -815,6 +826,10 @@ theme_override_colors/font_color = Color(0.27451, 0.321569, 0.176471, 1)
 theme_override_fonts/font = ExtResource("5_wp3ug")
 theme_override_font_sizes/font_size = 50
 text = "Ludum Dare 53"
+
+[node name="AudioMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_u28kp")
+volume_db = -26.081
 
 [connection signal="body_entered" from="Objectives/FlowersObjective" to="Objectives/FlowersObjective" method="_on_body_entered"]
 [connection signal="body_entered" from="Objectives/MushroomsObjective" to="Objectives/MushroomsObjective" method="_on_body_entered"]

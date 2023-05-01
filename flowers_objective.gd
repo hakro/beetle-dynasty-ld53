@@ -5,4 +5,6 @@ func _on_body_entered(body: Node2D) -> void:
 	body.hide_flowers()
 	GameManager.flowers_delivered = true
 	GameManager.next_step()
+	$AudioObjective.play()
+	await $AudioObjective.finished
 	queue_free()

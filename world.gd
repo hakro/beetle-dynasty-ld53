@@ -8,5 +8,6 @@ func _ready() -> void:
 
 func _on_pyschedelic_show():
 	psych_canvas.show()
+	$AudioMusic.play()
 	$Player.process_mode = Node.PROCESS_MODE_DISABLED
 	anim_player.play("psych_show")

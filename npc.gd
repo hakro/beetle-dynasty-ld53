@@ -4,6 +4,7 @@ extends Node2D
 @onready var dialog_bubble : Node2D = $DialogBubble
 @onready var dialog_label : Label = $DialogBubble/Label
 @onready var limit_wall : StaticBody2D = $LimitWall
+@onready var audio_dialog : AudioStreamPlayer = $AudioDialog
 
 func _ready() -> void:
 	# Player gets here
@@ -51,6 +52,8 @@ func set_bubble_text() -> void:
 		dialog_label.visible_ratio = 0
 		var tween = create_tween()
 		tween.tween_property(dialog_label, "visible_ratio", 1, 1.5)
+		if !audio_dialog.playing:
+			audio_dialog.play()
 		await tween.finished
 		await GameManager.interaction_triggered
 	GameManager.next_step()

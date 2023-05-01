@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://c58x5gngjss33"]
+[gd_scene load_steps=12 format=3 uid="uid://c58x5gngjss33"]
 
 [ext_resource type="Script" path="res://npc.gd" id="1_featy"]
 [ext_resource type="Texture2D" uid="uid://4kxkfsv71y3h" path="res://Assets/Sprites/common.png" id="2_g8mne"]
 [ext_resource type="PackedScene" uid="uid://bir883is87h4n" path="res://dialog_bubble.tscn" id="3_j8lob"]
+[ext_resource type="AudioStream" uid="uid://cy6dkyulpe6qu" path="res://Assets/Sounds/dialog.wav" id="4_0momc"]
 
 [sub_resource type="Animation" id="Animation_lyv6f"]
 length = 0.001
@@ -833,3 +834,7 @@ position = Vector2(288, -216)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LimitWall"]
 position = Vector2(91, 148.5)
 shape = SubResource("RectangleShape2D_68jw4")
+
+[node name="AudioDialog" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0momc")
+volume_db = -3.586
